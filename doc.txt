@@ -1,0 +1,54 @@
+$ npx create-react-app portfolio-k7p7-sing
+    :$ cd portfolio-k7p7-sing
+    :$ yarn start
+
+set vscode
+.vscode/settings.json
+    {
+    "editor.formatOnSave": true,
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx"
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+    }
+-------------------------
+    .prettierrc
+    {
+    "semi": false,
+    "singleQuote": true
+    }
+    -------------------
+    .eslintrc
+    {
+    "extends": ["react-app", "plugin:prettier/recommended"]
+    }
+
+$ yarn add -D eslint-plugin-prettier eslint-config-prettier prettier
+
+Install Material-UI
+$ yarn add @material-ui/core
+
+add Roboto Font in index.html
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+add SVG Icons
+$ yarn add @material-ui/icons
+
+import M-UI ไฟล์เดียว Minimizing Bundle Size
+$ yarn add -D babel-plugin-import
+.babelrc.js
+$ yarn add -D react-app-rewired customize-cra
+config-overrides.js
+
+package.json
+ "scripts": {
+-  "start": "react-scripts start"
++  "start": "react-app-rewired start"
+  }
